@@ -15,7 +15,7 @@ public class MoneyTransferApplication {
         config.register(JacksonFeature.class);
         ServletHolder servlet = new ServletHolder(new ServletContainer(config));
 
-        Server server = new Server(2222);
+        Server server = new Server(8090);
         ServletContextHandler context = new ServletContextHandler(server, "/*");
         context.addServlet(servlet, "/*");
 
