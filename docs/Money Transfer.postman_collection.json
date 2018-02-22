@@ -1,0 +1,275 @@
+{
+	"info": {
+		"name": "Money Transfer",
+		"_postman_id": "b2f9b93c-5ac9-bc07-df2b-b4aef90fae08",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": {\n        \"id\": \"e383963d-02dd-45b6-b07a-8377be402ec4\",\n        \"opportunityName\": \"Opp11111\",\n        \"description\": \"12\",\n        \"account\": {\n            \"id\": \"459ab76a-6bf0-4ed9-b5a4-9e3883ab4e50\",\n            \"name\": \"Testing Rules\",\n            \"type\": \"ACCOUNT\"\n        },\n        \"closeDate\": \"2017-01-04T21:00:00.000Z\",\n        \"customerBudget\": 123456,\n        \"opportunityCurrency\": {\n            \"id\": \"4f5b2362-4940-45e1-b03e-c7eb6ae3c0d0\",\n            \"name\": \"USD\"\n        },\n        \"opportunityOwner\": {\n            \"id\": \"08f48963-30a1-4b91-bc85-46851ee9df58\",\n            \"name\": \"tenant-admin@tenant.local tenant-admin@tenant.local\",\n            \"type\": \"USER\"\n        },\n        \"probability\": 20,\n        \"probabilityChange\": 0,\n        \"daysOnStage\": 8,\n        \"daysOnStageChange\": -1,\n        \"stage\": {\n            \"id\": \"13a6eb75-0934-4fe9-b415-c0312d12ff40\",\n            \"name\": \"Business Development\",\n            \"description\": \"Business Development\",\n            \"level\": 0\n        },\n        \"partnerRequired\": false,\n        \"dealType\": {\n            \"id\": \"5750b380-619f-4170-8568-c1989f056bc4\",\n            \"name\": \"Standard\",\n            \"description\": \"Standard\"\n        },\n        \"deliveryMethodology\": {\n            \"id\": \"92d31b5f-1d5f-4f7a-8421-d87a3776dc2f\",\n            \"name\": \"Agile\",\n            \"description\": \"Agile\"\n        },\n        \"strategicDeal\": false,\n        \"partnershipDeal\": false,\n        \"requiredToClose\": false,\n        \"customerBudgetChange\": 1,\n        \"weightedCustomerBudget\": 24691.2,\n        \"thirdPartyAmount\": 0,\n        \"licenseAmount\": 0,\n        \"professionalServicesAmount\": 123456,\n        \"supportAndMaintenanceAmount\": 0,\n        \"managedServicesAmount\": 0,\n        \"managedServicesDurationInMonths\": 0,\n        \"partOfCommittedSpend\": false,\n        \"softwareModules\": [\n            {\n                \"id\": \"4a37a397-2351-4fda-9810-911a09e10c29\",\n                \"name\": \"Application Management\",\n                \"description\": \"Application Management\",\n                \"modifier\": \"Framework\"\n            }\n        ],\n        \"implementationLevelOfEffort\": 2233,\n        \"weightedThirdPartyAmount\": 0,\n        \"weightedLicenseAmount\": 0,\n        \"weightedProfessionalServicesAmount\": 24691.2,\n        \"weightedSupportAndMaintenanceAmount\": 0,\n        \"weightedManagedServicesAmount\": 0,\n        \"customerBudgetTenantCurrency\": 123456,\n        \"thirdPartyAmountTenantCurrency\": 0,\n        \"licenseAmountTenantCurrency\": 0,\n        \"professionalServicesAmountTenantCurrency\": 123456,\n        \"supportAndMaintenanceAmountTenantCurrency\": 0,\n        \"managedServicesAmountTenantCurrency\": 0,\n        \"weightedThirdPartyAmountTenantCurrency\": 0,\n        \"weightedLicenseAmountTenantCurrency\": 0,\n        \"weightedProfessionalServicesAmountTenantCurrency\": 24691.2,\n        \"weightedSupportAndMaintenanceAmountTenantCurrency\": 0,\n        \"weightedManagedServicesAmountTenantCurrency\": 0,\n        \"weightedCustomerBudgetTenantCurrency\": 24691.2,\n        \"createdBy\": \"tenant-admin@tenant.local tenant-admin@tenant.local\",\n        \"lastModifiedBy\": \"null null\",\n        \"created\": \"2018-02-06T05:37:09.963Z\",\n        \"lastModified\": \"2018-02-14T15:16:21.139Z\",\n        \"synergyCommission\": 0,\n        \"necCommissionAmount\": 0,\n        \"necCommissionAmountTenantCurrency\": 0,\n        \"necTotalAmount\": 0,\n        \"necTotalAmountTenantCurrency\": 0,\n        \"ncTotalAmount\": 123456,\n        \"ncTotalAmountTenantCurrency\": 123456,\n        \"managementProbability\": {\n            \"id\": \"d1f4bf03-9180-94e4-3d1b-f152381c528f\",\n            \"name\": \"High Risk\",\n            \"description\": \"High Risk\"\n        },\n        \"accountType\": {\n            \"id\": \"b9e812ca-1540-4d4d-a3bd-4cd169715aaa\",\n            \"name\": \"Prospect\"\n        },\n        \"committedLeft\": 0,\n        \"totalLeft\": 0,\n        \"committedLeftTenantCurrency\": 0,\n        \"totalLeftTenantCurrency\": 0,\n        \"pendingApprovals\": 6\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json;odata=verbose"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"2c0059b4-c269-48c2-b16f-ff19eb4aec6f\",\r\n        \"name\": \"petya\",\r\n        \"balance\": 0\r\n    }\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": {\n        \"id\": \"e383963d-02dd-45b6-b07a-8377be402ec4\",\n        \"opportunityName\": \"Opp11111\",\n        \"description\": \"12\",\n        \"account\": {\n            \"id\": \"459ab76a-6bf0-4ed9-b5a4-9e3883ab4e50\",\n            \"name\": \"Testing Rules\",\n            \"type\": \"ACCOUNT\"\n        },\n        \"closeDate\": \"2017-01-04T21:00:00.000Z\",\n        \"customerBudget\": 123456,\n        \"opportunityCurrency\": {\n            \"id\": \"4f5b2362-4940-45e1-b03e-c7eb6ae3c0d0\",\n            \"name\": \"USD\"\n        },\n        \"opportunityOwner\": {\n            \"id\": \"08f48963-30a1-4b91-bc85-46851ee9df58\",\n            \"name\": \"tenant-admin@tenant.local tenant-admin@tenant.local\",\n            \"type\": \"USER\"\n        },\n        \"probability\": 20,\n        \"probabilityChange\": 0,\n        \"daysOnStage\": 8,\n        \"daysOnStageChange\": -1,\n        \"stage\": {\n            \"id\": \"13a6eb75-0934-4fe9-b415-c0312d12ff40\",\n            \"name\": \"Business Development\",\n            \"description\": \"Business Development\",\n            \"level\": 0\n        },\n        \"partnerRequired\": false,\n        \"dealType\": {\n            \"id\": \"5750b380-619f-4170-8568-c1989f056bc4\",\n            \"name\": \"Standard\",\n            \"description\": \"Standard\"\n        },\n        \"deliveryMethodology\": {\n            \"id\": \"92d31b5f-1d5f-4f7a-8421-d87a3776dc2f\",\n            \"name\": \"Agile\",\n            \"description\": \"Agile\"\n        },\n        \"strategicDeal\": false,\n        \"partnershipDeal\": false,\n        \"requiredToClose\": false,\n        \"customerBudgetChange\": 1,\n        \"weightedCustomerBudget\": 24691.2,\n        \"thirdPartyAmount\": 0,\n        \"licenseAmount\": 0,\n        \"professionalServicesAmount\": 123456,\n        \"supportAndMaintenanceAmount\": 0,\n        \"managedServicesAmount\": 0,\n        \"managedServicesDurationInMonths\": 0,\n        \"partOfCommittedSpend\": false,\n        \"softwareModules\": [\n            {\n                \"id\": \"4a37a397-2351-4fda-9810-911a09e10c29\",\n                \"name\": \"Application Management\",\n                \"description\": \"Application Management\",\n                \"modifier\": \"Framework\"\n            }\n        ],\n        \"implementationLevelOfEffort\": 2233,\n        \"weightedThirdPartyAmount\": 0,\n        \"weightedLicenseAmount\": 0,\n        \"weightedProfessionalServicesAmount\": 24691.2,\n        \"weightedSupportAndMaintenanceAmount\": 0,\n        \"weightedManagedServicesAmount\": 0,\n        \"customerBudgetTenantCurrency\": 123456,\n        \"thirdPartyAmountTenantCurrency\": 0,\n        \"licenseAmountTenantCurrency\": 0,\n        \"professionalServicesAmountTenantCurrency\": 123456,\n        \"supportAndMaintenanceAmountTenantCurrency\": 0,\n        \"managedServicesAmountTenantCurrency\": 0,\n        \"weightedThirdPartyAmountTenantCurrency\": 0,\n        \"weightedLicenseAmountTenantCurrency\": 0,\n        \"weightedProfessionalServicesAmountTenantCurrency\": 24691.2,\n        \"weightedSupportAndMaintenanceAmountTenantCurrency\": 0,\n        \"weightedManagedServicesAmountTenantCurrency\": 0,\n        \"weightedCustomerBudgetTenantCurrency\": 24691.2,\n        \"createdBy\": \"tenant-admin@tenant.local tenant-admin@tenant.local\",\n        \"lastModifiedBy\": \"null null\",\n        \"created\": \"2018-02-06T05:37:09.963Z\",\n        \"lastModified\": \"2018-02-14T15:16:21.139Z\",\n        \"synergyCommission\": 0,\n        \"necCommissionAmount\": 0,\n        \"necCommissionAmountTenantCurrency\": 0,\n        \"necTotalAmount\": 0,\n        \"necTotalAmountTenantCurrency\": 0,\n        \"ncTotalAmount\": 123456,\n        \"ncTotalAmountTenantCurrency\": 123456,\n        \"managementProbability\": {\n            \"id\": \"d1f4bf03-9180-94e4-3d1b-f152381c528f\",\n            \"name\": \"High Risk\",\n            \"description\": \"High Risk\"\n        },\n        \"accountType\": {\n            \"id\": \"b9e812ca-1540-4d4d-a3bd-4cd169715aaa\",\n            \"name\": \"Prospect\"\n        },\n        \"committedLeft\": 0,\n        \"totalLeft\": 0,\n        \"committedLeftTenantCurrency\": 0,\n        \"totalLeftTenantCurrency\": 0,\n        \"pendingApprovals\": 6\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts/c46f96e9-45db-4c69-be11-83cd8a12f32c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts",
+						"c46f96e9-45db-4c69-be11-83cd8a12f32c"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Payroll",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\" : 1000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts/payroll/f4782b33-5f2c-4d3f-b8f5-9ef4578e9b13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts",
+						"payroll",
+						"f4782b33-5f2c-4d3f-b8f5-9ef4578e9b13"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\" : 2000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts/withdraw/71e38944-ae1c-4726-b0d5-462d3ddc2edc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts",
+						"withdraw",
+						"71e38944-ae1c-4726-b0d5-462d3ddc2edc"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"tenant\", responseBody);"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\" : \"f4782b33-5f2c-4d3f-b8f5-9ef4578e9b13\",\n\t\"to\" : \"2c0059b4-c269-48c2-b16f-ff19eb4aec6f\",\n\t\"amount\" : 1500\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/accounts/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"accounts",
+						"transfer"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
