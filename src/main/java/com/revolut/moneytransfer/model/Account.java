@@ -39,4 +39,9 @@ public class Account {
     public Long getBalance() {
         return balance;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + id + ", name: " + name + ", balance: " + balance;
+    }
 }

@@ -32,6 +32,13 @@ public class AccountRestService {
         return accountDao.getAllAccounts();
     }
 
+    @DELETE
+    @Path("/all")
+    @Produces(MediaType.APPLICATION_JSON)
+    public void deleteAllAccounts() {
+        accountDao.deleteAllAccounts();
+    }
+
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)

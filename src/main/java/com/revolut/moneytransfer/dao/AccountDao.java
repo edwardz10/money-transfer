@@ -110,4 +110,8 @@ public class AccountDao {
             throw new Exception(INSUFFICIENT_FUNDS);
         }
     }
+
+    public void deleteAllAccounts() {
+        accounts.clear();
+    }
 }

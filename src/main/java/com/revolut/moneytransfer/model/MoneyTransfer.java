@@ -10,8 +10,10 @@ public class MoneyTransfer {
 
     public MoneyTransfer() {}
 
-    public MoneyTransfer(Long amount) {
+    public MoneyTransfer(Long amount, UUID from, UUID to) {
         this.amount = amount;
+        this.from = from;
+        this.to = to;
     }
 
     public void setFrom(UUID from) {
